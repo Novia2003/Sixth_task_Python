@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Согласие на прохождение теста
+{% endblock %}
+
+{% block body %}
+<h1>Уверены, что хотите пройти этот тестик с олимпиадными задачками?</h1>
+    <form action="{{ url_for('test') }}" method="get">
+      <input type="submit" value="Приступить к тесту">
+    </form>
+{% endblock %}
