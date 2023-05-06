@@ -7,3 +7,13 @@ body {
   height: 100px;
   font-size: 20px;
 }
+
+.right_answer {
+    background: #3bff0e;
+    width: 400px;
+}
+
+.wrong_answer {
+    background: #ff5857;
+    width: 400px;
+}

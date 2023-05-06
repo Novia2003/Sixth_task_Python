@@ -1,9 +1,17 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Результатик
+Результатики
 {% endblock %}
 
 {% block body %}
 <h1>Вам удалось набрать: {{ score }}/100</h1>
+    {% for question in questions %}
+        <p>{{ question }}</p>
+        <input type="text" name="{{ loop.index }}" value="{{ answers[loop.index0] }}" readonly
+               class="{% if correctness_answers[loop.index0] %}right_answer{% else %}wrong_answer{% endif %}">
+        <input type="text" name="{{ loop.index }} + 10" value="{{ expected_answers[loop.index0] }}" class="right_answer"
+        readonly>
+    {% endfor %}
+
 {% endblock %}
